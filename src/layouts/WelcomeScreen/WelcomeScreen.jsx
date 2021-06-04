@@ -2,7 +2,7 @@ import React from "react";
 import "./_style.css"
 
 
-export default ()=>(
+const WelcomeScreen= ()=>(
        <>
          <div className="body-wrap boxed-container">
             <header className="site-header">
@@ -511,3 +511,5 @@ export default ()=>(
         </div>
        </>
     );
+
+export default WelcomeScreen;

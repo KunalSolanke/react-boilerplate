@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch, Redirect, useRouteMatch} from 'react-router-dom';
-import WelcomeScreen from './layouts/WelcomeScreen/WelcomeScreen';
+import WelcomeScreen from 'src/layouts/WelcomeScreen/WelcomeScreen';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const projectRouter = () => {
+const ProjectRouter = () => {
     const {path} = useRouteMatch();
     return (
         <>
@@ -15,7 +15,7 @@ const projectRouter = () => {
     );
 };
 
-export default () => {
+const Router = () => {
     console.log('Starting app');
     return (
         <>
@@ -24,9 +24,10 @@ export default () => {
                     <Route exact path="/">
                         <Redirect path="/" to={BASE_URL} />
                     </Route>
-                    <Route path={`/${BASE_URL}`} component={projectRouter} />
+                    <Route path={`/${BASE_URL}`} component={ProjectRouter} />
                 </Switch>
             </BrowserRouter>
         </>
     );
 };
+export default Router;
