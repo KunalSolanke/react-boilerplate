@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "es2015",
+            "es2016",
+            "es6",
+            "es2017"
+        ],
+        "target": "es2017",
+        "module": "es6",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "src",
+        "paths": {
+            "@components": [
+                "components/*"
+            ],
+            "@pages": [
+                "pages/*"
+            ],
+            "@layouts": [
+                "layouts/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ]
+}
